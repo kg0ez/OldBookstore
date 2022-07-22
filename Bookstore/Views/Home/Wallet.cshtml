@@ -1,0 +1,44 @@
+﻿@model IEnumerable<Bookstore.Models.CreditCard>
+<body>
+    <header class="header"></header>
+    <main class="page">
+        <div class="main-block__body _container">
+            <div class="page__title">
+                <h2 class="main-block_title">Credit card list</h2>
+            </div>
+            <a class="main-block__button main-block__button_border" asp-action="AddCard">Add credit card</a>
+        </div>
+        <section class="page_tasks tasks">
+            <div class="tasks__container _container">
+                <div class="tasks__body">
+                    @foreach (var item in Model)
+                    {
+                        <div class="tasks__column">
+                            <div class="tasks__item item-task">
+                                <div class="item-tasks__card">
+                                    <p>CREDIT CARD</p>
+                                </div>
+                                <h3 class="item-tasks__title">@item.Number</h3>
+                                <div class="item-tasks__text">@item.ValidThru</div>
+                                <div class="item-tasks__card">
+                                    <a class="card__button" asp-action="Edit" asp-controller="Home" asp-route-id="">Изменить</a>
+                                    <form asp-controller="Home" asp-action="Delete" method="post" asp-route-id="@item.Id">
+                                        <input class="card__button" type="submit" value="Удалить" />
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                    <div class="tasks__column">
+                        <a asp-action="AddCard">
+                            <div class="tasks__item item-task add-img">
+                                <img class="center-img" src="~/img/card/plus.svg" alt="Task" />
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+

@@ -1,0 +1,34 @@
+﻿@model Bookstore.Models.CreditCard
+
+<body>
+    <header class="header"></header>
+    <main class="page">
+        <div class="main-block__body _container">
+            <div class="page__title">
+                <h2 class="main-block_title">Добавление задачи</h2>
+            </div>
+            <form class="main__form" asp-action="AddCard" asp-controller="home">
+                <div class="form__block">
+                    <label class="form__title" asp-for="CustomerId">Пользователь ID</label><br />
+                    <input class="form__input-card" type="text" placeholder="ID пользователя" asp-for="CustomerId" />
+                </div>
+                <div class="form__block">
+                    <label class="form__title" asp-for="Number">Number</label><br />
+                    <input class="form__input-card" type="text" placeholder="Number" asp-for="Number" />
+                </div>
+                <div class="form__block">
+                    <label class="form__title" asp-for="ValidThru">ValidThru</label><br />
+                    <input class="form__input-card" type="text" placeholder="ValidThru" asp-for="ValidThru" />
+                </div>
+                <div class="form__block">
+                    <label class="form__title" asp-for="CvvCvc">CvvCvc</label><br />
+                    <input class="form__input-card" type="text" placeholder="CvvCvc" asp-for="CvvCvc" />
+                </div>
+                <div class="form__block">
+                    <input class="form__button-card" type="submit" value="Отправить" />
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+

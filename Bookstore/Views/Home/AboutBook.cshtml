@@ -1,0 +1,36 @@
+﻿@model Bookstore.Models.AboutBook
+
+<section>
+    <div class="main">
+        <div class="main__image">
+            <img class="main__img" src="~/img/books/@Model.Book.Img" alt="img" />
+        </div>
+        <div class="main__text">
+            <div>
+
+            </div>
+            <h1 class="main__title">@Model.Book.Name</h1>
+            <p class="main__decs"><span class="book__characteristics">Author:</span>  @Model.Book.Author.Surname @Model.Book.Author.Name @Model.Book.Author.Patronymic</p>
+            <p class="main__decs"><span class="book__characteristics">Genre:</span>  @Model.Book.Description.Genre</p>
+            <p class="main__decs"><span class="book__characteristics">PublishingOffice:</span>  @Model.Book.PublishingOffice.Name @Model.Book.PublishingOffice.Address</p>
+            <p class="main__decs"><span class="book__characteristics">Language:</span>  @Model.Book.Language.Language1</p>
+            <p class="main__decs"><span class="book__characteristics">Cover:</span>  @Model.Cover</p>
+            <p class="main__decs"><span class="book__characteristics">Description:</span>  @Model.Description</p>
+            <p class="main__decs"><span class="book__characteristics">Weight:</span>  @Model.Weight</p>
+            <p class="main__decs"><span class="book__characteristics">Age Limit:</span>  @Model.AgeLimit</p>
+            <p class="main__decs"><span class="book__characteristics">Publication Year:</span>  @Model.PublicationYear</p>
+            <div class="main__buttoms">
+                <a class="main__btn main__btn_gradient" href="#">Buy Now</a>
+                <form asp-controller="Home" asp-action="AddBusket" method="post" asp-route-id="@Model.Book.Id">
+                    <input class="card__link" type="submit" value="Add to basket" />
+                </form>
+            </div>
+            <ul class="main__list">
+                <li class="main__item"><span class="main__span">4.7</span>Rating</li>
+                <li class="main__item"><span class="main__span">99.4%</span>Deliveries on time</li>
+                <li class="main__item"><span class="main__span">0%</span>Difective goods</li>
+            </ul>
+        </div>
+
+    </div>
+</section>
