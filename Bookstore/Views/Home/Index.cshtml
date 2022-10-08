@@ -1,34 +1,29 @@
-﻿@model IEnumerable<Bookstore.Models.CostBook>
+﻿@model IEnumerable<Bookstore.Common.Dto.BookDto>
 <head>
     <meta charset="utf-8" />
-    @*Убрать отступы в header*@
-    @*<link rel="stylesheet" href="~/css/mainPage.css" asp-append-version="true" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">*@
 </head>
 <body>
     <div class="container">
         <section>
-            <h2 class="title">Bookstore</h2>
-            <p class="desc">Over a thousand books and magazines.</p>
+            <h2 class="title">Крижный магазин</h2>
+            <p class="desc">Более тысячи книг и журналов</p>
             <div class="card">
                 @foreach (var item in Model)
                 {
                 <div class="card__item">
                     <div class="card__cover">
-                        <img class="card__img" src="~/img/books/@item.Book.Img" alt="@item.Book.Name" />
+                        <img class="card__img" src="~/img/books/@item.Img" alt="@item.Name" />
                     </div>
                     <div class="card__info">
                         <div>
-                            <p class="card__book">@item.Book.Name</p>
-                            <p class="card__nick">@item.Book.Author.Surname @item.Book.Author.Name @item.Book.Author.Patronymic</p>
+                            <p class="card__book">@item.Name</p>
+                            <p class="card__nick">@item.Author.Surname @item.Author.Name @item.Author.Patronymic</p>
                         </div>
-                        <p class="text__price">Current price<span class="card__price">@item.Price</span></p>
+                        <p class="text__price">ТЕкущая цена<span class="card__price">@item.CostBook.Price</span></p>
                     </div>
-                    <a asp-action="AboutBook" asp-controller="Home" asp-route-id="@item.Book.Id" class="card__link">More info</a>
-                    <form asp-controller="Home" asp-action="AddBusket" method="post" asp-route-id="@item.Book.Id">
-                        <input class="card__link" type="submit" value="Add to basket" />
+                    <a asp-action="AboutBook" asp-controller="Home" asp-route-id="@item.Id" class="card__link">Больше информации</a>
+                    <form asp-controller="Home" asp-action="AddBusket" method="post" asp-route-id="@item.Id">
+                        <input class="card__link" type="submit" value="Добавить в корзину" />
                     </form>
                 </div>
                 }

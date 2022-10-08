@@ -1,11 +1,11 @@
-﻿@model IEnumerable<Bookstore.Models.Basket>
+﻿@model IEnumerable<Bookstore.Common.Dto.BasketDto>
 
 
 <body>
     <div class="container">
         <section>
-            <h2 class="title">Basket</h2>
-            <p class="desc">Over a thousand books and magazines.</p>
+            <h2 class="title">Корзина</h2>
+            <p class="desc">Более тысячи книг и журналов</p>
             <div class="card">
                 @foreach (var item in Model)
                 {
@@ -18,11 +18,11 @@
                                 <p class="card__book">@item.Book.Name</p>
                                 <p class="card__nick">@item.Book.Author.Surname @item.Book.Author.Name @item.Book.Author.Patronymic</p>
                             </div>
-                            <p class="text__price">Current price<span class="card__price">10</span></p>
+                            <p class="text__price">Текущая цена<span class="card__price">@item.Book.CostBook.Price</span></p>
                         </div>
-                        <a asp-action="AboutBook" asp-controller="Home" asp-route-id="@item.Book.Id" class="card__link">More info</a>
+                        <a asp-action="AboutBook" asp-controller="Home" asp-route-id="@item.Book.Id" class="card__link">Больше информации</a>
                         <form asp-controller="Home" asp-action="DeleteBusket" method="post" asp-route-id="@item.Id">
-                            <input class="card__link" type="submit" value="Remove from basket" />
+                            <input class="card__link" type="submit" value="Удалить из корзины" />
                         </form>
                     </div>
                 }

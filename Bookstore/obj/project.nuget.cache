@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "r+2F+ox6cBxFotnhbSccR8PDKy8JvzeuRV/QSc8hsXoMZK5Fv/5zBdujnXp/IXNwIwbZ9N9FGuWyIrP+QX1BIQ==",
+  "dgSpecHash": "HgT6nCRhKjE3klIXjfZvAZZnnp3bnymdWSHmnLnGJSmDw7thiZluFIoPmzlvIcEJBoeYRZOM6mqq+CzJmRvGVw==",
   "success": true,
-  "projectFilePath": "/Users/kirill/Desktop/Bookstore/Bookstore/Bookstore.csproj",
+  "projectFilePath": "/Users/kirill/Desktop/GitHub/OldBookstore/Bookstore/Bookstore.csproj",
   "expectedPackageFiles": [
     "/Users/kirill/.nuget/packages/humanizer.core/2.8.26/humanizer.core.2.8.26.nupkg.sha512",
     "/Users/kirill/.nuget/packages/microsoft.csharp/4.5.0/microsoft.csharp.4.5.0.nupkg.sha512",

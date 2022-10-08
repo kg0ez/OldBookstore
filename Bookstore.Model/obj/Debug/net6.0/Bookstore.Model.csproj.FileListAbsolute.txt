@@ -1,0 +1,12 @@
+/Users/kirill/Desktop/GitHub/OldBookstore/Bookstore.Model/obj/Debug/net6.0/Bookstore.Model.csproj.AssemblyReference.cache
+/Users/kirill/Desktop/GitHub/OldBookstore/Bookstore.Model/obj/Debug/net6.0/Bookstore.Model.GeneratedMSBuildEditorConfig.editorconfig
+/Users/kirill/Desktop/GitHub/OldBookstore/Bookstore.Model/obj/Debug/net6.0/Bookstore.Model.AssemblyInfoInputs.cache
+/Users/kirill/Desktop/GitHub/OldBookstore/Bookstore.Model/obj/Debug/net6.0/Bookstore.Model.AssemblyInfo.cs
+/Users/kirill/Desktop/GitHub/OldBookstore/Bookstore.Model/obj/Debug/net6.0/Bookstore.Model.csproj.CoreCompileInputs.cache
+/Users/kirill/Desktop/GitHub/OldBookstore/Bookstore.Model/bin/Debug/net6.0/Bookstore.Model.deps.json
+/Users/kirill/Desktop/GitHub/OldBookstore/Bookstore.Model/bin/Debug/net6.0/Bookstore.Model.dll
+/Users/kirill/Desktop/GitHub/OldBookstore/Bookstore.Model/bin/Debug/net6.0/Bookstore.Model.pdb
+/Users/kirill/Desktop/GitHub/OldBookstore/Bookstore.Model/obj/Debug/net6.0/Bookstore.Model.dll
+/Users/kirill/Desktop/GitHub/OldBookstore/Bookstore.Model/obj/Debug/net6.0/refint/Bookstore.Model.dll
+/Users/kirill/Desktop/GitHub/OldBookstore/Bookstore.Model/obj/Debug/net6.0/Bookstore.Model.pdb
+/Users/kirill/Desktop/GitHub/OldBookstore/Bookstore.Model/obj/Debug/net6.0/ref/Bookstore.Model.dll

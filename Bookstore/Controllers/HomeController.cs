@@ -1,9 +1,13 @@
 ﻿using System.Diagnostics;
+using Bookstore.Common.Enums;
+using Bookstore.Handlers;
+using System.Text.Json;
 using Bookstore.Models;
 using Bookstore.Models.HelperClasses;
 using Bookstore.Models.Interface;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Bookstore.Common.Dto;
 
 namespace Bookstore.Controllers;
 
@@ -18,67 +22,142 @@ public class HomeController : Controller
         _operation = new Operation(_db);
     }
 
-    public IActionResult Index()=>
-        View(_db.CostBooks.Include(x => x.Book).ThenInclude(u => u!.Author).ToList());
+    public IActionResult Index()
+    {
+        var typeAction = QueryHandler<QueryBookType>.QueryTypeSerialize(QueryBookType.GetBooks);
+
+        string json = QueryHandler<int>.Serialize(0, QueryType.Book, typeAction);
+
+        string answer = ConnectionHandler.Client(json);
+
+        var books = JsonSerializer.Deserialize<List<BookDto>>(answer);
+
+        Handlers.Book.Books = books;
+
+        return View(books);
+    }
 
 
     public IActionResult AboutBook(Nullable<int> id)
     {
         if (id.HasValue)
         {
-            AboutBook? book = _db.AboutBooks.Include(x => x.Book).ThenInclude(y => y!.Author)
-                .Include(x => x.Book!.Language).Include(x => x.Book!.Description).Include(x => x.Book!.Provider)
-                .Include(x => x.Book!.PublishingOffice).FirstOrDefault(x => x.Book!.Id == id.Value);
+            var book = Handlers.Book.Books.FirstOrDefault(b => b.Id == id);
+
             if (book!=null)
                 return View(book);
         }
         return NotFound();
     }
 
-    public IActionResult Wallet()=>
-        View(_db.CreditCards.ToList());
+    public IActionResult Wallet()
+    {
+        var typeAction = QueryHandler<QueryCreditCardType>.QueryTypeSerialize(QueryCreditCardType.Get);
+
+        string json = QueryHandler<int>.Serialize(0, QueryType.CreditCard, typeAction);
+
+        string answer = ConnectionHandler.Client(json);
+
+        var cards = JsonSerializer.Deserialize<List<CreditCardDto>>(answer);
+
+        return View(cards);
+    }
 
     public IActionResult Delete(Nullable<int> id)
     {
-        if (id.HasValue)
-        {
-            CreditCard? card = _db.CreditCards.FirstOrDefault(x => x.Id == id.Value);
-            if (_operation.DeleteCard(card))
-                return RedirectToAction("Wallet");
-        }
-        return NotFound();
+        if (!id.HasValue)
+            return NotFound();
+
+        var typeAction = QueryHandler<QueryCreditCardType>.QueryTypeSerialize(QueryCreditCardType.Delete);
+
+        string json = QueryHandler<int>.Serialize((int)id, QueryType.CreditCard, typeAction);
+
+        string answer = ConnectionHandler.Client(json);
+
+        var cards = JsonSerializer.Deserialize<bool>(answer);
+
+        if (!cards)
+            return NotFound();
+
+        return RedirectToAction("Wallet");
     }
 
     public IActionResult AddCard()=>
         View();
 
     [HttpPost]
-    public IActionResult AddCard(CreditCard card)
+    public IActionResult AddCard(CardDto card)
     {
-        card.Customer = (Customer)_db.Customers.Where(x => x.Id == card.Id);
-        if (ModelState.IsValid)
-        {
-            _operation.AddCreditCard(card);
-            return RedirectToAction("Index");
-        }
-        return View(card);
+        if (!ModelState.IsValid)
+            return View(card);
+
+        var typeAction = QueryHandler<QueryCreditCardType>.QueryTypeSerialize(QueryCreditCardType.Add);
+
+        string json = QueryHandler<CardDto>.Serialize(card, QueryType.CreditCard, typeAction);
+
+        string answer = ConnectionHandler.Client(json);
+
+        var isAdd = JsonSerializer.Deserialize<bool>(answer);
+
+        if (!isAdd)
+            return View(card);
+        
+        return RedirectToAction("Wallet");
     }
 
-    public IActionResult Basket()=>
-        View(_db.Basket.Include(x => x.Book).ThenInclude(u => u!.Author).ToList());
+    public IActionResult Basket()
+    {
+        var typeAction = QueryHandler<QueryBasketType>.QueryTypeSerialize(QueryBasketType.Get);
+
+        string json = QueryHandler<int>.Serialize(0, QueryType.Basket, typeAction);
+
+        string answer = ConnectionHandler.Client(json);
+
+        var basket = JsonSerializer.Deserialize<List<BasketDto>>(answer);
+
+        return View(basket);
+    }
 
     [HttpPost]
     public IActionResult AddBusket(Nullable<int> id)
     {
-        _operation.AddItemBusket(id);
+        if (!id.HasValue)
+            return NotFound();
+
+        var typeAction = QueryHandler<QueryBasketType>.QueryTypeSerialize(QueryBasketType.Add);
+
+        string json = QueryHandler<int>.Serialize((int)id, QueryType.Basket, typeAction);
+
+        string answer = ConnectionHandler.Client(json);
+
+        var isAdded = JsonSerializer.Deserialize<bool>(answer);
+
+        if (!isAdded)
+            return NotFound();
+
+        //_operation.AddItemBusket(id);
         return RedirectToAction("Index");
     }
 
     [HttpPost]
     public IActionResult DeleteBusket(Nullable<int> id)
     {
-        if(_operation.DeleteItemBusket(id))
-            return RedirectToAction("Basket");
-        return NotFound();
+        if (!id.HasValue)
+            return NotFound();
+
+        var typeAction = QueryHandler<QueryBasketType>.QueryTypeSerialize(QueryBasketType.Delete);
+
+        string json = QueryHandler<int>.Serialize((int)id, QueryType.Basket, typeAction);
+
+        string answer = ConnectionHandler.Client(json);
+
+        var isAdded = JsonSerializer.Deserialize<bool>(answer);
+
+        if (!isAdded)
+            return NotFound();
+
+        return RedirectToAction("Basket");
+        //if (_operation.DeleteItemBusket(id))
+        //return NotFound();
     }
 }

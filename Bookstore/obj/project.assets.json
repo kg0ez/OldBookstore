@@ -634,6 +634,16 @@
             "rid": "win"
           }
         }
+      },
+      "Bookstore.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Bookstore.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Bookstore.Common.dll": {}
+        }
       }
     }
   },
@@ -1854,10 +1864,16 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "Bookstore.Common/1.0.0": {
+      "type": "project",
+      "path": "../Bookstore.Common/Bookstore.Common.csproj",
+      "msbuildProject": "../Bookstore.Common/Bookstore.Common.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "Bookstore.Common >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 6.0.7",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.7",
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.7"
@@ -1869,11 +1885,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/kirill/Desktop/Bookstore/Bookstore/Bookstore.csproj",
+      "projectUniqueName": "/Users/kirill/Desktop/GitHub/OldBookstore/Bookstore/Bookstore.csproj",
       "projectName": "Bookstore",
-      "projectPath": "/Users/kirill/Desktop/Bookstore/Bookstore/Bookstore.csproj",
+      "projectPath": "/Users/kirill/Desktop/GitHub/OldBookstore/Bookstore/Bookstore.csproj",
       "packagesPath": "/Users/kirill/.nuget/packages/",
-      "outputPath": "/Users/kirill/Desktop/Bookstore/Bookstore/obj/",
+      "outputPath": "/Users/kirill/Desktop/GitHub/OldBookstore/Bookstore/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/kirill/.nuget/NuGet/NuGet.Config"
@@ -1887,7 +1903,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "/Users/kirill/Desktop/GitHub/OldBookstore/Bookstore.Common/Bookstore.Common.csproj": {
+              "projectPath": "/Users/kirill/Desktop/GitHub/OldBookstore/Bookstore.Common/Bookstore.Common.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -1921,7 +1941,8 @@
           "net47",
           "net471",
           "net472",
-          "net48"
+          "net48",
+          "net481"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -1933,7 +1954,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.301/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.400/RuntimeIdentifierGraph.json"
       }
     }
   }

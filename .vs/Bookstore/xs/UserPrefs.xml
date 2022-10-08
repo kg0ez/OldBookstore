@@ -1,0 +1,50 @@
+﻿<Properties StartupConfiguration="{AF85689B-6EFF-49D5-B281-39B968E7F6DE}|Default">
+  <MonoDevelop.Ide.ItemProperties.Serv.Bookstore.Serv FirstBuild="True" />
+  <MonoDevelop.Ide.ItemProperties.Business_220Logic.Bookstore.BusinessLogic FirstBuild="True" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Bookstore/appsettings.json">
+    <Files>
+      <File FileName="Bookstore/Models/HelperClasses/Operation.cs" Line="1" Column="1" />
+      <File FileName="Bookstore/Models/Interface/IDataOperation.cs" Line="1" Column="1" />
+      <File FileName="Bookstore/Controllers/HomeController.cs" Line="25" Column="53" />
+      <File FileName="Bookstore/Models/Storage.cs" Line="1" Column="1" />
+      <File FileName="Bookstore/Models/Publisher.cs" Line="1" Column="1" />
+      <File FileName="Bookstore/Models/Provider.cs" Line="1" Column="1" />
+      <File FileName="Bookstore/Models/Order.cs" Line="1" Column="1" />
+      <File FileName="Bookstore.Serv/Program.cs" Line="1" Column="1" />
+      <File FileName="Bookstore/Models/BookstoreContext.cs" Line="1" Column="1" />
+      <File FileName="Bookstore/Program.cs" Line="1" Column="1" />
+      <File FileName="Bookstore/appsettings.json" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Bookstore" expanded="True">
+            <Node name="Business Logic" expanded="True">
+              <Node name="Bookstore.BusinessLogic" expanded="True" />
+            </Node>
+            <Node name="Common" expanded="True">
+              <Node name="Bookstore.Common" expanded="True" />
+            </Node>
+            <Node name="Serv" expanded="True">
+              <Node name="Bookstore.Serv" expanded="True" />
+            </Node>
+            <Node name="Bookstore" expanded="True">
+              <Node name="Models" expanded="True" />
+              <Node name="appsettings.json" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints />
+  <MonoDevelop.Ide.ItemProperties.Bookstore PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.ItemProperties.Common.Bookstore.Common FirstBuild="True" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Models.Bookstore.Model FirstBuild="True" />
+</Properties>

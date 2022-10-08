@@ -15,6 +15,7 @@
     <None Remove="..\.editorconfig" />
     <None Remove="Models\Interface\" />
     <None Remove="Models\HelperClasses\" />
+    <None Remove="Handlers\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
@@ -25,6 +26,7 @@
     <Folder Include="Migrations\" />
     <Folder Include="Models\Interface\" />
     <Folder Include="Models\HelperClasses\" />
+    <Folder Include="Handlers\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.7" />
@@ -39,5 +41,10 @@
     <Content Remove="wwwroot\img\header\" />
     <Content Remove="wwwroot\img\books\" />
     <Content Remove="wwwroot\img\card\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Bookstore.Common\Bookstore.Common.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
   </ItemGroup>
 </Project>

@@ -1,17 +1,13 @@
-﻿@model Bookstore.Models.CreditCard
+﻿@model Bookstore.Common.Dto.CardDto
 
 <body>
     <header class="header"></header>
     <main class="page">
         <div class="main-block__body _container">
             <div class="page__title">
-                <h2 class="main-block_title">Добавление задачи</h2>
+                <h2 class="main-block_title">Добавить карту</h2>
             </div>
             <form class="main__form" asp-action="AddCard" asp-controller="home">
-                <div class="form__block">
-                    <label class="form__title" asp-for="CustomerId">Пользователь ID</label><br />
-                    <input class="form__input-card" type="text" placeholder="ID пользователя" asp-for="CustomerId" />
-                </div>
                 <div class="form__block">
                     <label class="form__title" asp-for="Number">Number</label><br />
                     <input class="form__input-card" type="text" placeholder="Number" asp-for="Number" />

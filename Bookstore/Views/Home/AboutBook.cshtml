@@ -1,34 +1,34 @@
-﻿@model Bookstore.Models.AboutBook
+﻿@model Bookstore.Common.Dto.BookDto
 
 <section>
     <div class="main">
         <div class="main__image">
-            <img class="main__img" src="~/img/books/@Model.Book.Img" alt="img" />
+            <img class="main__img" src="~/img/books/@Model.Img" alt="img" />
         </div>
         <div class="main__text">
             <div>
 
             </div>
-            <h1 class="main__title">@Model.Book.Name</h1>
-            <p class="main__decs"><span class="book__characteristics">Author:</span>  @Model.Book.Author.Surname @Model.Book.Author.Name @Model.Book.Author.Patronymic</p>
-            <p class="main__decs"><span class="book__characteristics">Genre:</span>  @Model.Book.Description.Genre</p>
-            <p class="main__decs"><span class="book__characteristics">PublishingOffice:</span>  @Model.Book.PublishingOffice.Name @Model.Book.PublishingOffice.Address</p>
-            <p class="main__decs"><span class="book__characteristics">Language:</span>  @Model.Book.Language.Language1</p>
-            <p class="main__decs"><span class="book__characteristics">Cover:</span>  @Model.Cover</p>
-            <p class="main__decs"><span class="book__characteristics">Description:</span>  @Model.Description</p>
-            <p class="main__decs"><span class="book__characteristics">Weight:</span>  @Model.Weight</p>
-            <p class="main__decs"><span class="book__characteristics">Age Limit:</span>  @Model.AgeLimit</p>
-            <p class="main__decs"><span class="book__characteristics">Publication Year:</span>  @Model.PublicationYear</p>
+            <h1 class="main__title">@Model.Name</h1>
+            <p class="main__decs"><span class="book__characteristics">Автор:</span>  @Model.Author.Surname @Model.Author.Name @Model.Author.Patronymic</p>
+            <p class="main__decs"><span class="book__characteristics">Жанр:</span>  @Model.Genre</p>
+            <p class="main__decs"><span class="book__characteristics">Издательство:</span>  @Model.PublishingOffice.Name @Model.PublishingOffice.Address</p>
+            <p class="main__decs"><span class="book__characteristics">Язык:</span>  @Model.Language</p>
+            <p class="main__decs"><span class="book__characteristics">Обложка:</span>  @Model.AboutBook.Cover</p>
+            <p class="main__decs"><span class="book__characteristics">Описание:</span>  @Model.AboutBook.Description</p>
+            <p class="main__decs"><span class="book__characteristics">Вес:</span>  @Model.AboutBook.Weight</p>
+            <p class="main__decs"><span class="book__characteristics">Возростной лемит:</span>  @Model.AboutBook.AgeLimit</p>
+            <p class="main__decs"><span class="book__characteristics">Год выпуска:</span>  @Model.AboutBook.PublicationYear</p>
             <div class="main__buttoms">
-                <a class="main__btn main__btn_gradient" href="#">Buy Now</a>
-                <form asp-controller="Home" asp-action="AddBusket" method="post" asp-route-id="@Model.Book.Id">
-                    <input class="card__link" type="submit" value="Add to basket" />
+                <a class="main__btn main__btn_gradient" href="#">Купить сейчас</a>
+                <form asp-controller="Home" asp-action="AddBusket" method="post" asp-route-id="@Model.Id">
+                    <input class="card__link" type="submit" value="Добавить в корзину" />
                 </form>
             </div>
             <ul class="main__list">
-                <li class="main__item"><span class="main__span">4.7</span>Rating</li>
-                <li class="main__item"><span class="main__span">99.4%</span>Deliveries on time</li>
-                <li class="main__item"><span class="main__span">0%</span>Difective goods</li>
+                <li class="main__item"><span class="main__span">4.7</span>Рейтинг</li>
+                <li class="main__item"><span class="main__span">99.4%</span>Доставок вовремя</li>
+                <li class="main__item"><span class="main__span">0%</span>Товаров с дефектами</li>
             </ul>
         </div>
 

@@ -1,0 +1,17 @@
+/Users/kirill/Desktop/GitHub/OldBookstore/Bookstore.BusinessLogic/bin/Debug/net6.0/Bookstore.BusinessLogic.deps.json
+/Users/kirill/Desktop/GitHub/OldBookstore/Bookstore.BusinessLogic/bin/Debug/net6.0/Bookstore.BusinessLogic.dll
+/Users/kirill/Desktop/GitHub/OldBookstore/Bookstore.BusinessLogic/bin/Debug/net6.0/Bookstore.BusinessLogic.pdb
+/Users/kirill/Desktop/GitHub/OldBookstore/Bookstore.BusinessLogic/bin/Debug/net6.0/Bookstore.Common.dll
+/Users/kirill/Desktop/GitHub/OldBookstore/Bookstore.BusinessLogic/bin/Debug/net6.0/Bookstore.Model.dll
+/Users/kirill/Desktop/GitHub/OldBookstore/Bookstore.BusinessLogic/bin/Debug/net6.0/Bookstore.Common.pdb
+/Users/kirill/Desktop/GitHub/OldBookstore/Bookstore.BusinessLogic/bin/Debug/net6.0/Bookstore.Model.pdb
+/Users/kirill/Desktop/GitHub/OldBookstore/Bookstore.BusinessLogic/obj/Debug/net6.0/Bookstore.BusinessLogic.csproj.AssemblyReference.cache
+/Users/kirill/Desktop/GitHub/OldBookstore/Bookstore.BusinessLogic/obj/Debug/net6.0/Bookstore.BusinessLogic.GeneratedMSBuildEditorConfig.editorconfig
+/Users/kirill/Desktop/GitHub/OldBookstore/Bookstore.BusinessLogic/obj/Debug/net6.0/Bookstore.BusinessLogic.AssemblyInfoInputs.cache
+/Users/kirill/Desktop/GitHub/OldBookstore/Bookstore.BusinessLogic/obj/Debug/net6.0/Bookstore.BusinessLogic.AssemblyInfo.cs
+/Users/kirill/Desktop/GitHub/OldBookstore/Bookstore.BusinessLogic/obj/Debug/net6.0/Bookstore.BusinessLogic.csproj.CoreCompileInputs.cache
+/Users/kirill/Desktop/GitHub/OldBookstore/Bookstore.BusinessLogic/obj/Debug/net6.0/Bookstore.BusinessLogic.csproj.CopyComplete
+/Users/kirill/Desktop/GitHub/OldBookstore/Bookstore.BusinessLogic/obj/Debug/net6.0/Bookstore.BusinessLogic.dll
+/Users/kirill/Desktop/GitHub/OldBookstore/Bookstore.BusinessLogic/obj/Debug/net6.0/refint/Bookstore.BusinessLogic.dll
+/Users/kirill/Desktop/GitHub/OldBookstore/Bookstore.BusinessLogic/obj/Debug/net6.0/Bookstore.BusinessLogic.pdb
+/Users/kirill/Desktop/GitHub/OldBookstore/Bookstore.BusinessLogic/obj/Debug/net6.0/ref/Bookstore.BusinessLogic.dll
