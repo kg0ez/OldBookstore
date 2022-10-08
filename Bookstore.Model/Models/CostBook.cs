@@ -8,7 +8,6 @@ namespace Bookstore.Model.Models
         public decimal CostDelivery { get; set; }
         public string TimeDelivery { get; set; } = null!;
 
-        //public int BookId { get; set; }
         public Book Book { get; set; }
     }
 }

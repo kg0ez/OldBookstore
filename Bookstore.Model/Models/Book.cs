@@ -23,8 +23,6 @@ namespace Bookstore.Model.Models
 
         public int PublishingOfficeId { get; set; }
         public PublishingOffice PublishingOffice { get; set; } = null!;
-
-        //public ICollection<Order> Orders { get; set; }
     }
 }
 

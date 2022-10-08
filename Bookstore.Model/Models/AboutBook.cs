@@ -10,7 +10,6 @@ namespace Bookstore.Model.Models
         public int AgeLimit { get; set; }
         public int PublicationYear { get; set; }
 
-        //public int BookId { get; set; }
         public Book Book { get; set; }
     }
 }

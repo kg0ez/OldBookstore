@@ -2,9 +2,6 @@
 using Bookstore.Common.Enums;
 using Bookstore.Handlers;
 using System.Text.Json;
-using Bookstore.Models;
-using Bookstore.Models.HelperClasses;
-using Bookstore.Models.Interface;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Bookstore.Common.Dto;
@@ -13,15 +10,6 @@ namespace Bookstore.Controllers;
 
 public class HomeController : Controller
 {
-    private BookstoreContext _db;
-    private Operation _operation;
-
-    public HomeController(BookstoreContext context)
-    {
-        _db = context;
-        _operation = new Operation(_db);
-    }
-
     public IActionResult Index()
     {
         var typeAction = QueryHandler<QueryBookType>.QueryTypeSerialize(QueryBookType.GetBooks);
@@ -135,7 +123,6 @@ public class HomeController : Controller
         if (!isAdded)
             return NotFound();
 
-        //_operation.AddItemBusket(id);
         return RedirectToAction("Index");
     }
 
@@ -157,7 +144,5 @@ public class HomeController : Controller
             return NotFound();
 
         return RedirectToAction("Basket");
-        //if (_operation.DeleteItemBusket(id))
-        //return NotFound();
     }
 }

@@ -7,25 +7,17 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Models\" />
     <None Remove="Microsoft.EntityFrameworkCore" />
     <None Remove="Microsoft.EntityFrameworkCore.SqlServer" />
     <None Remove="Microsoft.EntityFrameworkCore.Tools" />
-    <None Remove="Migrations\" />
     <None Remove="..\.editorconfig" />
-    <None Remove="Models\Interface\" />
-    <None Remove="Models\HelperClasses\" />
     <None Remove="Handlers\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Models\" />
     <Folder Include="wwwroot\img\" />
     <Folder Include="wwwroot\img\header\" />
     <Folder Include="wwwroot\img\books\" />
     <Folder Include="wwwroot\img\card\" />
-    <Folder Include="Migrations\" />
-    <Folder Include="Models\Interface\" />
-    <Folder Include="Models\HelperClasses\" />
     <Folder Include="Handlers\" />
   </ItemGroup>
   <ItemGroup>

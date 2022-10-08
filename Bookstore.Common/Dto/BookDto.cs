@@ -9,10 +9,8 @@ namespace Bookstore.Common.Dto
         public string Language { get; set; } = null!;
         public string Genre { get; set; } = null!;
 
-        //public int AboutBookId { get; set; }
         public AboutBookDto AboutBook { get; set; }
 
-        //public int CostBookId { get; set; }
         public CostBookDto CostBook { get; set; }
 
         public int AuthorId { get; set; }
