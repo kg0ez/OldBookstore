@@ -19,15 +19,18 @@
                             <p class="card__book">@item.Name</p>
                             <p class="card__nick">@item.Author.Surname @item.Author.Name @item.Author.Patronymic</p>
                         </div>
-                        <p class="text__price">ТЕкущая цена<span class="card__price">@item.CostBook.Price</span></p>
+                        <p class="text__price">Текущая цена<span class="card__price">@item.CostBook.Price</span></p>
                     </div>
-                    <a asp-action="AboutBook" asp-controller="Home" asp-route-id="@item.Id" class="card__link">Больше информации</a>
-                    <form asp-controller="Home" asp-action="AddBusket" method="post" asp-route-id="@item.Id">
-                        <input class="card__link" type="submit" value="Добавить в корзину" />
-                    </form>
+                    <div class="card__b">
+
+                        <a asp-action="AboutBook" asp-controller="Home" asp-route-id="@item.Id" class="card__link">Больше информации</a>
+                        <form asp-controller="Home" asp-action="AddBusket" method="post" asp-route-id="@item.Id">
+                            <input class="card__link button-len" type="submit" value="Добавить в корзину" />
+                        </form>
+                    </div>
+                    </div>
+                    }
                 </div>
-                }
-            </div>
         </section>
     </div>
 </body>

@@ -20,10 +20,12 @@
                             </div>
                             <p class="text__price">Текущая цена<span class="card__price">@item.Book.CostBook.Price</span></p>
                         </div>
-                        <a asp-action="AboutBook" asp-controller="Home" asp-route-id="@item.Book.Id" class="card__link">Больше информации</a>
-                        <form asp-controller="Home" asp-action="DeleteBusket" method="post" asp-route-id="@item.Id">
-                            <input class="card__link" type="submit" value="Удалить из корзины" />
-                        </form>
+                        <div class="card__b">
+                            <a asp-action="AboutBook" asp-controller="Home" asp-route-id="@item.Book.Id" class="card__link">Больше информации</a>
+                            <form asp-controller="Home" asp-action="DeleteBusket" method="post" asp-route-id="@item.Id">
+                                <input class="card__link button-len" type="submit" value="Удалить из корзины" />
+                            </form>
+                        </div>
                     </div>
                 }
             </div>

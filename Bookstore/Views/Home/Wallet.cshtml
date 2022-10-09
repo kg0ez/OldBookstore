@@ -16,10 +16,13 @@
                         <div class="tasks__column">
                             <div class="tasks__item item-task">
                                 <div class="item-tasks__card">
-                                    <p>Кредитная карточка</p>
+                                    <p>Банковская карточка</p>
                                 </div>
                                 <h3 class="item-tasks__title">@item.Number</h3>
-                                <div class="item-tasks__text">@item.ValidThru</div>
+                                <div class="card-item">
+                                    <div class="item-tasks__text">@item.ValidThru</div>
+                                    <div class="item-tasks__text">@item.CvvCvc</div>
+                                </div>
                                 <div class="item-tasks__card">
                                     <a class="card__button" asp-action="Edit" asp-controller="Home" asp-route-id="">Изменить</a>
                                     <form asp-controller="Home" asp-action="Delete" method="post" asp-route-id="@item.Id">

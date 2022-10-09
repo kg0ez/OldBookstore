@@ -3,6 +3,7 @@
     background: linear-gradient(113.49deg,#984D38 -30.3%, #181E41 58.12%) no-repeat;
     font-weight: 500;
     color: #fff;
+/*    min-height: 100%;*/
 }
 
 .header {
@@ -12,6 +13,9 @@
     justify-content: space-between;
     align-items: center;
     padding: 20px 15px 50px 15px;
+}
+html {
+    min-height: 100%;
 }
 
 .header__logo {
@@ -36,7 +40,16 @@
 .from-button__img {
     width: 20px;
 }
-
+.card__b {
+    position: absolute;
+    bottom: 0;
+    width:86%;
+    padding-bottom:10px;
+}
+.card-item {
+    display: flex;
+    justify-content:space-between;
+}
 .form__input {
     width: 384px;
     background: rgba(255,255,255, 0.1);
@@ -95,7 +108,7 @@
 .card {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+/*    justify-content: space-between;*/
     margin-bottom: 150px;
 }
 
@@ -109,6 +122,8 @@
     box-sizing: border-box;
     transition: .3s;
     margin-bottom: 10px;
+    height:700px;
+    position: relative;
 }
 
     .card__item:hover {
@@ -360,14 +375,16 @@
     max-width: 600px;
 }
 .main__buttoms {
+    display:flex;
     margin: 40px 0px 0px 0px;
 }
 .book__characteristics {
     color:#fff;
 }
+.button-len {
+    width: 100%;
+}
 /*---------------------------*/
-
-
 .page_tasks {
     position: relative;
 }
@@ -495,7 +512,7 @@
 }
 
 .item-tasks__title {
-    color: #000;
+    color: #fff;
     font-weight: 700;
     letter-spacing: 0.1px;
     font-size: 24px;

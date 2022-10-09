@@ -20,7 +20,7 @@
             <p class="main__decs"><span class="book__characteristics">Возростной лемит:</span>  @Model.AboutBook.AgeLimit</p>
             <p class="main__decs"><span class="book__characteristics">Год выпуска:</span>  @Model.AboutBook.PublicationYear</p>
             <div class="main__buttoms">
-                <a class="main__btn main__btn_gradient" href="#">Купить сейчас</a>
+                <input class="card__link" type="submit" value="Купить сейчас" />
                 <form asp-controller="Home" asp-action="AddBusket" method="post" asp-route-id="@Model.Id">
                     <input class="card__link" type="submit" value="Добавить в корзину" />
                 </form>
